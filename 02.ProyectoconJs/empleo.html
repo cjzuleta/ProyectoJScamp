@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevJobs - Inicio</title>
+    <meta
+      name="description"
+      content="Encuentra las mejores ofertas de trabajo para desarrolladores en DevJobs."
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+
+    <script type="module" src="./js/script.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <svg
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        DevJobs
+      </h1>
+
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="#">Empleos</a>
+        <a href="#">Empresas</a>
+        <a href="#">Salarios</a>
+      </nav>
+
+      <div class="sesion">
+        <button class="btn btn-primary">Subir CV</button>
+        <!-- <button class="btn">Iniciar sesión</button> -->
+         <!-- <devjobs-login service="google" username="google.com" size="32">
+      </devjobs-login> -->
+         <devjobs-login service="github" username="cjzuleta" size="40"></devjobs-login>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1>Encuentra tu próximo empleo</h1>
+        <p>Explora miles de oportunidades en el sector tecnologico.</p>
+        <form role="search">
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-search"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+              <path d="M21 21l-6 -6" />
+            </svg>
+            <input
+              type="text"
+              name="search"
+              placeholder="Buscar trabajos, empresas o habilidades..."
+            />
+          </div>
+        </form>
+        <section class="filters">
+          <select name="category" id="category">
+            <option value="">Tecnologia</option>
+            <option value="frontend">Frontend</option>
+            <option value="backend">Backend</option>
+            <option value="fullstack">Fullstack</option>
+            <option value="devops">DevOps</option>
+          </select>
+          <select name="location" id="location">
+            <option value="">Ubicación</option>
+            <option value="bogota">Bogotá</option>
+            <option value="medellin">Medellín</option>
+            <option value="cali">Cali</option>
+            <option value="barranquilla">Barranquilla</option>
+          </select>
+          <select name="type" id="type">
+            <option value="">Tipo de empleo</option>
+            <option value="fulltime">Tiempo completo</option>
+            <option value="parttime">Medio tiempo</option>
+            <option value="freelance">Freelance</option>
+          </select>
+          <select name="experience" id="experience">
+            <option value="">Experiencia</option>
+            <option value="junior">Junior</option>
+            <option value="mid">Mid-level</option>
+            <option value="senior">Senior</option>
+          </select>
+        </section>
+<h2>Resultados de búsqueda</h2>
+        <section class="job-listings">
+          
+          <div class="job-card">
+            <div class="job-card-info"><h3>Desarrollador Frontend</h3>
+            <p>Empresa XYZ - Bogotá, Colombia</p>
+            <p>Tiempo completo - Junior</p>
+            <p>Descripción del puesto... Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+            
+           
+            <button class="btn btn-primary">Aplicar</button>
+          </div>
+          <div class="job-card">
+            <div class="job-card-info"><h3>Desarrollador Backend</h3>
+            <p>Empresa ABC - Medellín, Colombia</p>
+            <p>Tiempo completo - Mid-level</p>
+            <p>Descripción del puesto... Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+            
+            <button class="btn btn-primary">Aplicar</button>
+          </div>
+          <div class="job-card">
+            <div class="job-card-info"><h3>Fullstack Developer</h3>
+            <p>Empresa 456 - Medellín, Colombia</p>
+            <p>Medio tiempo - Senior</p>
+            <p>Descripción del puesto... Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div> 
+            <button class="btn btn-primary">Aplicar</button>
+          </div>
+          <div class="job-card">
+            <div class="job-card-info"><h3>Ingeniero DevOps</h3>
+            <p>Empresa 123 - Cali, Colombia</p>
+            <p>Freelance - Senior</p>
+            <p>Descripción del puesto... Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+            <button class="btn btn-primary">Aplicar</button>
+          </div>
+        </section>
+
+        <nav class="pagination">
+                <a class="btn"><!--
+category: Arrows
+version: "2.24"
+unicode: "faf1"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="16"
+  height="16"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="#607d8b"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M13 20l-3 -8l3 -8" />
+</svg>
+</a>
+          <a class="is-active" href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#"><!--
+category: Arrows
+version: "2.24"
+unicode: "faf2"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="16"
+  height="16"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="#607d8b"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M11 4l3 8l-3 8" />
+</svg>
+</a>
+        </nav>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 DevJobs. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
