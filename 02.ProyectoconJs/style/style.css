@@ -344,16 +344,11 @@ footer {
     margin-bottom: 1rem;
   }
 
-}
-
-.filters {
+  .filters {
     display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 800px;
-  gap: 1rem;
-  margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  margin-top: 1rem;
 
     select {
       padding: 0.5rem;
@@ -371,6 +366,10 @@ footer {
       }
     }
   }
+
+}
+
+
 
 .job-listings{
     display: flex;
@@ -452,4 +451,13 @@ footer {
       border-radius: 0.5rem;
     }
   }
+}
+
+.button-apply-job {
+  background:#09f;
+  &.is-applied{
+    background: #4aaf4e;
+    pointer-events: none;
+  }
+
 }
