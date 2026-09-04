@@ -77,16 +77,23 @@
               type="text"
               name="search"
               placeholder="Buscar trabajos, empresas o habilidades..."
+              id="search"
             />
           </div>
 
           <section class="filters">
             <select name="category" id="category">
-              <option value="">Tecnologia</option>
+              <option value="">Profesiones</option>
+              <optgroup label="Profesiones populares">
               <option value="frontend">Frontend</option>
               <option value="backend">Backend</option>
               <option value="fullstack">Fullstack</option>
               <option value="devops">DevOps</option>
+              </optgroup>
+              <hr>
+              <optgroup>
+                <option value="db">DataBase</option>
+              </optgroup>
             </select>
             <select name="location" id="location">
               <option value="">Ubicación</option>
@@ -112,8 +119,8 @@
         <span class="valor-seleccionado"></span>
         <h2>Resultados de búsqueda</h2>
       <section class="job-listings">
-        <div class="job-card">
-          <div class="job-card-info">
+        <div data-modalidad="frontend" class="job-card">
+          <div>
             <h3>Desarrollador Frontend</h3>
             <p>Empresa XYZ - Bogotá, Colombia</p>
             <p>Tiempo completo - Junior</p>
@@ -123,12 +130,13 @@
               adipiscing elit. Lorem ipsum dolor sit amet, consectetur
               adipiscing elit.
             </p>
+            
           </div>
-
           <button class="button-apply-job" id="btn">Aplicar</button>
+          
         </div>
-        <div class="job-card">
-          <div class="job-card-info">
+        <div data-modalidad="backend" class="job-card">
+          <div>
             <h3>Desarrollador Backend</h3>
             <p>Empresa ABC - Medellín, Colombia</p>
             <p>Tiempo completo - Mid-level</p>
@@ -142,8 +150,8 @@
 
           <button class="button-apply-job" id="btn">Aplicar</button>
         </div>
-        <div class="job-card">
-          <div class="job-card-info">
+        <div data-modalidad="fullstack" class="job-card">
+          <div>
             <h3>Fullstack Developer</h3>
             <p>Empresa 456 - Medellín, Colombia</p>
             <p>Medio tiempo - Senior</p>
@@ -156,8 +164,8 @@
           </div>
           <button class="button-apply-job" id="btn">Aplicar</button>
         </div>
-        <div class="job-card">
-          <div class="job-card-info">
+        <div data-modalidad="devops" class="job-card">
+          <div>
             <h3>Ingeniero DevOps</h3>
             <p>Empresa 123 - Cali, Colombia</p>
             <p>Freelance - Senior</p>
