@@ -63,11 +63,12 @@ searchInput.addEventListener("input", function () {
 
 //otra opcion explicada es con el atributo data, q nos permite con modalidad traer la info de la card q necesitamos
 
-const filter = document.querySelector('#category');
+const filter = document.querySelector('#filter-location');
 const mensaje = document.querySelector('.valor-seleccionado');
-const jobs = document.querySelectorAll('.job-card');
+
 
 filter.addEventListener('change', function () {
+    const jobs = document.querySelectorAll('.job-card');
     const selectedValue = filter.value;
 
     if (selectedValue) {
@@ -94,6 +95,8 @@ filter.addEventListener('change', function () {
 });
 
 // extraer la info en las cards con el archivo JSON
+//elemento donde se van a cargar las cards
+const container = document.querySelector('.job-listings');
 
 //console.log('antes del fetch')
 fetch("./data.json")//consulto la pagina
@@ -102,7 +105,31 @@ fetch("./data.json")//consulto la pagina
     })
     .then((jobs) => (
         //console.log('Tengo los resultados')
-        console.log(jobs)
+        //console.log(jobs)
+        //LOGICA PARA RECORRER EL JSON Y CREARLO COMO HTML eneste caso para crear las cards
+        jobs.forEach(job =>{
+            const article = document.createElement('article');//se crea elemento
+
+            //luegos sus atributos
+            article.className = 'job-card';
+
+            article.dataset.modalidad = job.data.modalidad;
+            article.dataset.nivel = job.data.nivel;
+            article.dataset.technology = job.data.technology;
+
+            //Luego su contenido
+            article.innerHTML = `<div>
+            <h3>${job.titulo}</h3>
+            <p>${job.empresa} | ${job.ubicacion}</p>
+            <p>${job.descripcion}</p>
+            
+          </div>
+          <button class="button-apply-job" id="btn">Aplicar</button>`
+
+          container.appendChild(article);
+        })
     ))
 //console.log('despues del fetch')
+
+
 
